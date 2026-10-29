@@ -1,0 +1,120 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    font-size: 10px;
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+
+    background-color: #2c4053;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+}
+
+/* Menu lateral fixo */
+aside {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    bottom: 34px;
+    width: 115px;
+
+    background-color: #344b60;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 10px;
+    gap: 2px;
+}
+
+aside a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+/* Área principal */
+main {
+    margin-left: 115px;
+    padding: 50px 10px 45px;
+}
+
+/* Galeria com CSS Grid */
+.galeria {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 60px);
+
+    gap: 8px;
+}
+
+/* Blocos verdes */
+.bloco {
+    background-color: #1abc9c;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}
+
+/* Rodapé fixo */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 34px;
+
+    background-color: #2c4053;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 600px) {
+    aside {
+        width: 80px;
+    }
+
+    main {
+        margin-left: 80px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 60px);
+        gap: 6px;
+    }
+}
